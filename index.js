@@ -35,7 +35,7 @@ function staticServer(root) {
 		if (req.method !== "GET" && req.method !== "HEAD") return next();
 		var reqpath = url.parse(req.url).pathname;
 		var hasNoOrigin = !req.headers.origin;
-		var injectCandidates = [ "</body>", "</svg>" ];
+		var injectCandidates = [ "</body>", "</svg>", "</html>" ];
 		var injectTag = null;
 
 		function directory() {
